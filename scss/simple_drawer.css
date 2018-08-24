@@ -7,11 +7,22 @@ body {
   position: relative !important;
   margin: 0 !important; }
 
+.simple-drawer-overlay {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.55); }
+
 #simple_drawer_wrapper {
   position: absolute;
   height: 100%;
-  width: 0px;
-  background-color: #fefefeeb; }
+  width: 300px;
+  z-index: 2;
+  left: -250px;
+  background-color: transparent; }
   #simple_drawer_wrapper.simple-drawer-open {
     animation-name: drawerHeaderOpen;
     animation-duration: 0.3s;
@@ -32,7 +43,8 @@ body {
       width: 40px;
       position: relative;
       outline: none;
-      cursor: pointer; }
+      cursor: pointer;
+      left: 260px; }
       #simple_drawer_wrapper #simple_drawer_header button:after {
         cursor: pointer;
         content: '';
@@ -100,12 +112,12 @@ body {
   100% {
     transform: rotate(-45deg);
     top: 10px;
-    left: 250px; } }
+    left: -10px; } }
 @keyframes rotateRight {
   100% {
     transform: rotate(45deg);
     top: 10px;
-    left: 250px; } }
+    left: -10px; } }
 @keyframes rotateLeftInverse {
   0% {
     transform: rotate(-45deg);
@@ -126,14 +138,16 @@ body {
     transform: rotate(0deg); } }
 @keyframes drawerHeaderOpen {
   0% {
-    width: 0px; }
+    left: -250px;
+    background-color: transparent; }
   100% {
-    width: 300px; } }
+    left: 0px;
+    background-color: #fefefeeb; } }
 @keyframes drawerHeaderClose {
   0% {
-    width: 300px; }
+    left: 0px;
+    background-color: #fefefeeb; }
   100% {
-    width: 0px;
-    background-color: transparent; } }
+    left: -250px; } }
 
 /*# sourceMappingURL=simple_drawer.css.map */

@@ -9,12 +9,24 @@ body {
 	margin: 0 !important;
 }
 
+.simple-drawer-overlay {
+	position: fixed;
+	z-index: 1;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.55);
+}
+
 #simple_drawer_wrapper {
 	position: absolute;
 	height: 100%;
-	// width: 300px;
-	width: 0px;
-	background-color: #fefefeeb;
+	width: 300px;
+	// background-color: #fefefeeb;
+	z-index: 2;
+	left: -250px;
+	background-color: transparent;
 
 	&.simple-drawer-open {
 		animation-name: drawerHeaderOpen;
@@ -42,6 +54,7 @@ body {
 			position: relative;
 			outline: none;
 			cursor: pointer;
+			left: 260px;
 
 			&:after {
 				cursor: pointer;
@@ -141,7 +154,7 @@ body {
 	100% {
 		transform: rotate(-45deg);
 		top: 10px;
-		left: 250px;
+		left: -10px;
 	}
 }
 
@@ -152,7 +165,7 @@ body {
 	100% {
 		transform: rotate(45deg);
 		top: 10px;
-		left: 250px;
+		left: -10px;
 	}
 }
 
@@ -185,20 +198,27 @@ body {
 
 @keyframes drawerHeaderOpen {
 	0% {
-		width: 0px;
+		// width: 0px;
+		left: -250px;
+		background-color: transparent;
 	}
 
 	100% {
-		width: 300px;
+		// width: 300px;
+		left: 0px;
+		background-color: #fefefeeb;
 	}
 }
 
 @keyframes drawerHeaderClose {
 	0% {
-		width: 300px;
+		// width: 300px;
+		left: 0px;
+		background-color: #fefefeeb;
 	}
 	100% {
-		width: 0px;
-		background-color: transparent;
+		left: -250px;
+		// width: 0px;
+		// background-color: transparent;
 	}
 }

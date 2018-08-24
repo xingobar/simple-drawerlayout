@@ -40,6 +40,7 @@ ps:required jquery
         simpleDrawer.toggle({
             overlay: boolean, // whether display overlay or not (default true)
             backdrop:string , // set  backdrop color
+            guester:string, // set user guester  (click or swipe, default value is click)
         });
     </code>
 </pre>

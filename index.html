@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DrawerLayout測試</title>
+        <link rel="stylesheet" href="./scss/simple_drawer.css">
+    </head>
+    <body>
+        <div id="simple_drawer_wrapper">
+            <header id="simple_drawer_header">
+                <button type="button" class="drawer-hamburger"></button>
+            </header>
+            <nav role="navigation" class="simple-drawer-navigation">
+                <ul>
+                    <li>Option1</li>
+                    <li>Option2</li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+    <script type="text/javascript" src="./src/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="./src/simple-drawer.js"></script>
+    <script type="text/javascript">
+        simpleDrawer.toggle();
+    </script>
+</html>

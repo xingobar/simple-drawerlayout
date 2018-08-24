@@ -1,0 +1,121 @@
+html,
+body {
+  height: 100% !important; }
+
+body {
+  background-color: gray;
+  position: relative !important;
+  margin: 0 !important; }
+
+#simple_drawer_wrapper {
+  position: absolute;
+  height: 100%;
+  width: 0px;
+  background-color: #fefefeeb; }
+  #simple_drawer_wrapper.simple-drawer-open {
+    animation-name: drawerHeaderOpen;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+  #simple_drawer_wrapper.simple-drawer-close {
+    animation-name: drawerHeaderClose;
+    animation-fill-mode: forwards;
+    animation-duration: 0.3s;
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+  #simple_drawer_wrapper #simple_drawer_header {
+    width: 40px;
+    height: 45px; }
+    #simple_drawer_wrapper #simple_drawer_header button {
+      border: none;
+      background: transparent;
+      border-top: 4px solid black;
+      width: 40px;
+      position: relative;
+      outline: none; }
+      #simple_drawer_wrapper #simple_drawer_header button:after {
+        content: '';
+        position: absolute;
+        width: 40px;
+        background-color: transparent;
+        border-top: 4px solid black;
+        left: 0px;
+        top: 25px; }
+      #simple_drawer_wrapper #simple_drawer_header button:before {
+        content: '';
+        position: absolute;
+        width: 40px;
+        background-color: transparent;
+        border-top: 4px solid black;
+        left: 0;
+        top: 10px; }
+    #simple_drawer_wrapper #simple_drawer_header .simple-hamburger-open {
+      border: none !important; }
+      #simple_drawer_wrapper #simple_drawer_header .simple-hamburger-open:after {
+        animation-name: rotateLeft;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+      #simple_drawer_wrapper #simple_drawer_header .simple-hamburger-open:before {
+        animation-name: rotateRight;
+        animation-duration: 0.3s;
+        animation-fill-mode: forwards;
+        animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+    #simple_drawer_wrapper #simple_drawer_header .simple-hamburger-reverse:after {
+      animation-name: rotateLeftInverse;
+      animation-duration: 0.3s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+    #simple_drawer_wrapper #simple_drawer_header .simple-hamburger-reverse:before {
+      animation-name: rotateRightInverse;
+      animation-duration: 0.5s;
+      animation-fill-mode: forwards;
+      animation-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+  #simple_drawer_wrapper .simple-drawer-navigation ul {
+    list-style: none;
+    padding-left: 0px;
+    text-align: center; }
+    #simple_drawer_wrapper .simple-drawer-navigation ul li {
+      line-height: 50px;
+      font-size: 20px; }
+
+@keyframes rotateLeft {
+  100% {
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 250px; } }
+@keyframes rotateRight {
+  100% {
+    transform: rotate(45deg);
+    top: 10px;
+    left: 250px; } }
+@keyframes rotateLeftInverse {
+  0% {
+    transform: rotate(-45deg);
+    top: 10px;
+    left: 250px; }
+  100% {
+    left: 0px;
+    top: 25px;
+    transform: rotate(0deg); } }
+@keyframes rotateRightInverse {
+  0% {
+    transform: rotate(45deg);
+    top: 10px;
+    left: 250px; }
+  100% {
+    left: 0;
+    top: 10px;
+    transform: rotate(0deg); } }
+@keyframes drawerHeaderOpen {
+  0% {
+    width: 0px; }
+  100% {
+    width: 300px; } }
+@keyframes drawerHeaderClose {
+  0% {
+    width: 300px; }
+  100% {
+    width: 0px;
+    background-color: transparent; } }
+
+/*# sourceMappingURL=simple_drawer.css.map */

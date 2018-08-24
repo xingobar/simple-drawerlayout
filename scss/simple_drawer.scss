@@ -1,0 +1,181 @@
+html,
+body {
+	height: 100% !important;
+}
+
+body {
+	background-color: gray;
+	position: relative !important;
+	margin: 0 !important;
+}
+
+#simple_drawer_wrapper {
+	position: absolute;
+	height: 100%;
+	// width: 300px;
+	width: 0px;
+	background-color: #fefefeeb;
+
+	&.simple-drawer-open {
+		animation-name: drawerHeaderOpen;
+		animation-duration: 0.3s;
+		animation-fill-mode: forwards;
+		animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+	}
+
+	&.simple-drawer-close {
+		animation-name: drawerHeaderClose;
+		animation-fill-mode: forwards;
+		animation-duration: 0.3s;
+		animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+	}
+
+	#simple_drawer_header {
+		width: 40px;
+		height: 45px;
+
+		button {
+			border: none;
+			background: transparent;
+			border-top: 4px solid black;
+			width: 40px;
+			position: relative;
+			outline: none;
+
+			&:after {
+				content: '';
+				position: absolute;
+				width: 40px;
+				background-color: transparent;
+				border-top: 4px solid black;
+				left: 0px;
+				top: 25px;
+			}
+
+			&:before {
+				content: '';
+				position: absolute;
+				width: 40px;
+				background-color: transparent;
+				border-top: 4px solid black;
+				left: 0;
+				top: 10px;
+			}
+		}
+
+		.simple-hamburger-open {
+			border: none !important;
+
+			&:after {
+				animation-name: rotateLeft;
+				animation-duration: 0.3s;
+				animation-fill-mode: forwards;
+				animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+			}
+
+			&:before {
+				animation-name: rotateRight;
+				animation-duration: 0.3s;
+				animation-fill-mode: forwards;
+				animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+			}
+		}
+
+		.simple-hamburger-reverse {
+			&:after {
+				animation-name: rotateLeftInverse;
+				animation-duration: 0.3s;
+				animation-fill-mode: forwards;
+				animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+			}
+
+			&:before {
+				animation-name: rotateRightInverse;
+				animation-duration: 0.5s;
+				animation-fill-mode: forwards;
+				animation-timing-function: cubic-bezier(.17, .67, .83, .67);
+			}
+		}
+	}
+
+	.simple-drawer-navigation {
+		ul {
+			list-style: none;
+			padding-left: 0px;
+			text-align: center;
+			li {
+				line-height: 50px;
+				font-size: 20px;
+			}
+		}
+	}
+}
+
+@keyframes rotateLeft {
+	0% {
+	}
+
+	100% {
+		transform: rotate(-45deg);
+		top: 10px;
+		left: 250px;
+	}
+}
+
+@keyframes rotateRight {
+	0% {
+	}
+
+	100% {
+		transform: rotate(45deg);
+		top: 10px;
+		left: 250px;
+	}
+}
+
+@keyframes rotateLeftInverse {
+	0% {
+		transform: rotate(-45deg);
+		top: 10px;
+		left: 250px;
+	}
+
+	100% {
+		left: 0px;
+		top: 25px;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes rotateRightInverse {
+	0% {
+		transform: rotate(45deg);
+		top: 10px;
+		left: 250px;
+	}
+	100% {
+		left: 0;
+		top: 10px;
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes drawerHeaderOpen {
+	0% {
+		width: 0px;
+	}
+
+	100% {
+		width: 300px;
+	}
+}
+
+@keyframes drawerHeaderClose {
+	0% {
+		width: 300px;
+	}
+	100% {
+		width: 0px;
+		background-color: transparent;
+	}
+}

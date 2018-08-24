@@ -31,8 +31,10 @@ body {
       border-top: 4px solid black;
       width: 40px;
       position: relative;
-      outline: none; }
+      outline: none;
+      cursor: pointer; }
       #simple_drawer_wrapper #simple_drawer_header button:after {
+        cursor: pointer;
         content: '';
         position: absolute;
         width: 40px;
@@ -41,6 +43,7 @@ body {
         left: 0px;
         top: 25px; }
       #simple_drawer_wrapper #simple_drawer_header button:before {
+        cursor: pointer;
         content: '';
         position: absolute;
         width: 40px;
@@ -76,7 +79,22 @@ body {
     text-align: center; }
     #simple_drawer_wrapper .simple-drawer-navigation ul li {
       line-height: 50px;
-      font-size: 20px; }
+      font-size: 20px;
+      position: relative; }
+      #simple_drawer_wrapper .simple-drawer-navigation ul li:before {
+        position: absolute;
+        content: '';
+        bottom: 0;
+        left: 100px;
+        width: 0;
+        border-top: 1px solid black;
+        transition: width 0.2s;
+        transition-timing-function: cubic-bezier(0.17, 0.67, 0.83, 0.67); }
+      #simple_drawer_wrapper .simple-drawer-navigation ul li:hover {
+        cursor: pointer; }
+        #simple_drawer_wrapper .simple-drawer-navigation ul li:hover:before {
+          content: '';
+          width: 35%; }
 
 @keyframes rotateLeft {
   100% {

@@ -16,5 +16,11 @@
 	"bugs": {
 		"url": "https://github.com/xingobar/simple-drawerlayout/issues"
 	},
-	"homepage": "https://github.com/xingobar/simple-drawerlayout#readme"
+	"homepage": "https://github.com/xingobar/simple-drawerlayout#readme",
+	"dependencies": {
+		"jquery": "^3.3.1"
+	},
+	"devDependencies": {
+		"jquery": "^3.3.1"
+	}
 }

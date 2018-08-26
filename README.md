@@ -1,6 +1,8 @@
 # simple-drawerlayout
 ps:required jquery
 
+## you can git clone https://github.com/xingobar/simple-drawerlayout.git 
+
 <p>step1: include jQuery:</p>
 <pre>
     <code>
